@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "onlinespy"
+version = "0.1.0"
+description = ""
+authors = ["krozzzis"]
+readme = "README.md"
+
+
+[tool.poetry.scripts]
+bot = "bot:main"
+api = "api:main"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyrogram = "^2.0.106"
+pymongo = "^4.8.0"
+fastapi = "^0.111.1"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

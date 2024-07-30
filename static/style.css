@@ -1,0 +1,97 @@
+body {
+  font-family: sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#date {
+  width: 200px;
+}
+
+
+#list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list_entry_photo {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.list_entry_link {
+  text-decoration: none;
+  text-color: black;
+  word-break: break-word;
+}
+
+.list_entry {
+  display: flex;
+  gap: 8px;
+  background-color: #ddd;
+  border-radius: 4px;
+  width: 350px;
+  padding: 8px; 
+}
+
+#plot {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hour {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.minute {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+.hour_text {
+  width: 32px;
+  height: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: end;
+  align-items: center;
+  padding-right: 4px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile_name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#photo {
+  border-radius: 50%;
+  width: 48px;
+}
+
+#name {
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+#username {
+  font-weight: light;
+  font-size: 10pt;
+}

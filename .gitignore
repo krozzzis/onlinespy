@@ -1,0 +1,6 @@
+logs/
+static/photo/
+__pycache__/
+
+*.session*
+settings.py
