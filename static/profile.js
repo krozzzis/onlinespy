@@ -33,13 +33,13 @@ function interpolateColors(color1, color2, percent) {
 }
 
 async function get_name(username) {
-  const response = await fetch(`/get_name/${username}`)
+  const response = await fetch(`/api/get_name/${username}`)
   const json = await response.json()
   return json
 }
 
 async function get_events(year, month, day, username) {
-  const response = await fetch(`/online/${year}/${month}/${day}/${username}`)
+  const response = await fetch(`/api/online/${year}/${month}/${day}/${username}`)
   const json = await response.json()
   return json.events
 }

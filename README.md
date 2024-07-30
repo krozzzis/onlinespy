@@ -38,4 +38,4 @@ Run webserver:
 poetry run fastapi dev api.py
 ```
 
-Open [http://127.0.0.1:8000/static/index.html](http://127.0.0.1:8000/static/index.html)
+Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/)

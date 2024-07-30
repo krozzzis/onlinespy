@@ -1,5 +1,5 @@
 async function get_users() {
-  const response = await fetch("/get_users")
+  const response = await fetch("/api/get_users")
   const json = await response.json()
   return json
 }
@@ -20,7 +20,7 @@ async function create_list() {
     entry.append(image)
 
     let link = document.createElement("a")
-    link.href = `/static/profile.html?username=${user[0]}`
+    link.href = `/profile?username=${user[0]}`
     link.textContent = `${user[1]} @${user[0]}`
     link.className = "list_entry_link"
     entry.append(link)

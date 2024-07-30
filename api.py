@@ -10,7 +10,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-@app.get("/get_users")
+@app.get("/api/get_users")
 async def get_users():
     result = []
     for user in app.database.names.find():
@@ -19,14 +19,14 @@ async def get_users():
     return result
 
 
-@app.get("/get_name/{username}")
+@app.get("/api/get_name/{username}")
 async def get_name(username: str):
     user = app.database.names.find_one({"username": username})
     return user['name']
 
 
-@app.get("/online/{year}/{month}/{day}/{username}")
-async def root(year: int, month: int, day: int, username: str):
+@app.get("/api/online/{year}/{month}/{day}/{username}")
+async def online(year: int, month: int, day: int, username: str):
     result = []
     start = datetime(year, month, day)
     end = start + timedelta(days=1)
@@ -48,6 +48,15 @@ async def root(year: int, month: int, day: int, username: str):
         return {"status:": "ok", "events": result}
 
 
+@app.get("/")
+async def index():
+    return FileResponse('static/index.html')
+
+@app.get("/profile")
+async def profile():
+    return FileResponse('static/profile.html')
+
+
 @app.on_event("startup")
 def startup_db_client():
     app.mongodb_client = MongoClient("mongodb://localhost:27017/")
@@ -60,10 +69,7 @@ def shutdown_db_client():
 
 
 def main():
-    global app, mongodb
-
     logger.add("logs/api_{time}.log", format="[{time}/{level}] {message}")
-
     logger.info("Started api server")
 
     
