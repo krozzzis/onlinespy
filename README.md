@@ -1,5 +1,16 @@
 # Usage
 
+Clone repository:
+```bash
+git clone https://github.com/krozzzis/onlinespy
+cd onlinespy
+```
+
+Install dependencies:
+```bash
+poetry install
+```
+
 Create file `settings.py` with content:
 ```python
 # Get at https://core.telegram.org/api/obtaining_api_id
