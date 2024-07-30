@@ -1,4 +1,14 @@
+Display how much time your contacts are online in telegram as activity graph
+
+![screenshot](./.github/screenshot.png)
+
 # Usage
+
+## Prerequirements
+
+You need installed `mongodb`
+
+## Installation
 
 Clone repository:
 ```bash
